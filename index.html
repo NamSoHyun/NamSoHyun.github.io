@@ -6,14 +6,19 @@
   <style>
     body {
       margin: 0;
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+
+    /* ====== 랜딩 영역 ====== */
+    .landing {
       height: 100vh;
       background-color: #000;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      font-family: 'Arial', sans-serif;
-      color: white;
+      position: relative;
       overflow: hidden;
     }
 
@@ -29,37 +34,84 @@
     }
 
     @keyframes pulse {
-      0% {
-        transform: scale(1);
-        opacity: 0.3;
-      }
-      50% {
-        transform: scale(1.2);
-        opacity: 0.1;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 0.3;
-      }
+      0% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.2); opacity: 0.1; }
+      100% { transform: scale(1); opacity: 0.3; }
     }
 
-    h1 {
+    .landing h1 {
       font-size: 4em;
       font-weight: bold;
       z-index: 1;
     }
 
-    .subtitle {
+    .landing .subtitle {
       margin-top: 10px;
       font-size: 1.2em;
       color: #aaa;
       z-index: 1;
     }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+      animation: bounce 1.5s infinite;
+      z-index: 1;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    /* ====== 자기소개 섹션 ====== */
+    .about {
+      height: 100vh;
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .about h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #00F5D4;
+    }
+
+    .about p {
+      max-width: 600px;
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #ddd;
+    }
   </style>
 </head>
 <body>
-  <div class="pulse-bg"></div>
-  <h1>portfolio</h1>
-  <div class="subtitle">Pulse에서 시작해, 안전한 흐름을 만든다</div>
+  <!-- 랜딩 -->
+  <section class="landing">
+    <div class="pulse-bg"></div>
+    <h1>portfolio</h1>
+    <div class="subtitle">Pulse에서 시작해, 안전한 흐름을 만든다</div>
+    <div class="scroll-down">▼ Scroll Down ▼</div>
+  </section>
+
+  <!-- 자기소개 -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      안녕하세요! 저는 남소현입니다.<br>
+      인프라 보안과 시스템 운영에 관심이 많으며,<br>
+      다양한 프로젝트를 통해 보안 아키텍처와<br>
+      취약점 분석 경험을 쌓아왔습니다.<br><br>
+      새로운 기술을 배우고 문제를 해결하는 과정에서<br>
+      작은 펄스(Pulse) 같은 변화가 큰 흐름을 만든다고 믿습니다.
+    </p>
+  </section>
 </body>
 </html>
