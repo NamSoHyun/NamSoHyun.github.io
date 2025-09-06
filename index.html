@@ -27,10 +27,31 @@
       width: 100%;
       height: 100%;
       background: radial-gradient(circle at center,
-                  rgba(255, 255, 255, 0.05) 0%,
+                  rgba(121, 121, 121, 0.904) 0%,
                   transparent 70%);
       animation: pulse 4s infinite;
       z-index: 0;
+    }
+    .landing h1 {
+      font-size: 4em;
+      font-weight: bold;
+      z-index: 1;
+    }
+
+    .landing .subtitle {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #aaa;
+      z-index: 1;
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+      animation: bounce 1.5s infinite;
+      z-index: 1;
     }
 
     @keyframes pulse {
@@ -96,21 +117,20 @@
   <!-- 랜딩 -->
   <section class="landing">
     <div class="pulse-bg"></div>
+    <div>2025</div>
     <h1>portfolio</h1>
-    <div class="subtitle">Pulse에서 시작해, 안전한 흐름을 만든다</div>
-    <div class="scroll-down">▼ Scroll Down ▼</div>
+    <div class="subtitle" style="font-size: 13px; margin-top: -42px;">펄스에서 시작해 안전한 흐름을 만든다</div>
+    <div class="scroll-down">▼</div>
   </section>
 
   <!-- 자기소개 -->
   <section class="about">
     <h2>About Me</h2>
     <p>
-      안녕하세요! 저는 남소현입니다.<br>
-      인프라 보안과 시스템 운영에 관심이 많으며,<br>
-      다양한 프로젝트를 통해 보안 아키텍처와<br>
-      취약점 분석 경험을 쌓아왔습니다.<br><br>
-      새로운 기술을 배우고 문제를 해결하는 과정에서<br>
-      작은 펄스(Pulse) 같은 변화가 큰 흐름을 만든다고 믿습니다.
+      저는 아키텍처 설계와 보안 모니터링, 해킹 실습, 취약점 분석 등 보안 실무를 직접 경험하며 시스템 전반을 이해했습니다. 
+      또한 Docker 기반 클라우드 환경 구축과 AR 앱 개발을 통해 다양한 기술을 적용하며 역량을 넓혔습니다.
+      <br><br>  
+      앞으로도 새로운 기술을 익히고 도전을 이어가며 안전하고 신뢰할 수 있는 디지털 환경을 만들어가는 보안 전문가로 성장하겠습니다.
     </p>
   </section>
 </body>
