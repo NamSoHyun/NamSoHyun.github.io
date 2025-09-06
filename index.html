@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Nam So Hyun Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    .pulse-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center,
+                  rgba(255, 255, 255, 0.05) 0%,
+                  transparent 70%);
+      animation: pulse 4s infinite;
+      z-index: 0;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.3;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 0.1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 0.3;
+      }
+    }
+
+    h1 {
+      font-size: 4em;
+      font-weight: bold;
+      z-index: 1;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #aaa;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="pulse-bg"></div>
+  <h1>portfolio</h1>
+  <div class="subtitle">Pulse에서 시작해, 안전한 흐름을 만든다</div>
+</body>
+</html>
