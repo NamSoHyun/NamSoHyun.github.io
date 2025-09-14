@@ -30,6 +30,7 @@ body {
   background: #0e0e0e;
   color: white;
   cursor: none;
+  background-color: #111;
 }
 
 /* 네비게이션 */
@@ -53,11 +54,12 @@ body {
   padding-left: 20px;
   display: flex;
   align-items: center;
+  font-size: 0.7em;
 }
 .logo-circle {
   margin-right: 8px;
   margin-top: -2.5px;
-  font-size: 8px;
+  font-size: 0.7em;
   text-shadow: 0 0 5px rgba(215, 215, 215, 0.708),
                0 0 10px rgba(215, 215, 215, 0.328),
                0 0 20px rgba(215, 215, 215, 0.253);
@@ -74,7 +76,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
-  font-size: 12px;
+  font-size: 0.5em;
 }
 .navbar a:hover {
   color: #ffffff;
@@ -96,6 +98,7 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
+  background: #0e0e0e;
 }
 .pulse-bg {
   position: absolute;
@@ -220,7 +223,7 @@ body {
 /* 자기소개 */
 .about {
   font-family: 'PyeojinGothic';
-  height: 100vh;
+  height: 90vh;
   background-color: #111;
   display: flex;
   flex-direction: column;
@@ -228,7 +231,7 @@ body {
   align-items: center;
   text-align: center;
   padding: 40px;
-  padding-top: 80px;
+  padding-top: 50px;
 }
 .about-title {
   font-family: 'PyeojinGothic';
@@ -236,7 +239,7 @@ body {
   font-size: 3vh;           
   font-weight: bold;
   color: rgb(255, 255, 255);
-  z-index: 1000;
+  z-index: 1;
   padding-bottom: 2.3em;
 }
 .about p {
@@ -246,13 +249,88 @@ body {
   color: #ddd;
 }
 
+/* 구분선 */
+.title-line {
+  background-color: #111;
+  position: relative;
+  border-bottom: 1px solid #b1b1b1;  /* 밑줄 */
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+}
+
+/* 흰 점 */
+.title-line::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;   
+  transform: translateX(-40vh);
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(215, 215, 215, 0.708),
+               0 0 10px rgba(215, 215, 215, 0.328),
+               0 0 20px rgba(215, 215, 215, 0.253);
+}
+.title-line1 {
+  background-color: #111;
+  position: relative;
+  border-bottom: 1px solid #b1b1b1;  
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+}
+
+/* 흰 점 */
+.title-line1::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; 
+  transform: translateX(-60vh);
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(215, 215, 215, 0.708),
+               0 0 10px rgba(215, 215, 215, 0.328),
+               0 0 20px rgba(215, 215, 215, 0.253);
+}
+.title-line2 {
+  background-color: #111;
+  position: relative;
+  border-bottom: 1px solid #b1b1b1;  
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+}
+
+/* 흰 점 */
+.title-line2::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  transform: translateX(-20vh);
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(215, 215, 215, 0.708),
+               0 0 10px rgba(215, 215, 215, 0.328),
+               0 0 20px rgba(215, 215, 215, 0.253);
+}
+
 /* --- 나의 강점 --- */
 .strengths {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #111;
+  padding-top: 10vh;
 }
 .title-circle {
   padding-bottom: 0.5em;
@@ -268,7 +346,7 @@ body {
   font-size: 3vh;           
   font-weight: bold;
   color: rgb(255, 255, 255);
-  z-index: 1000;
+  z-index: 1;
 }
 .photo {
   position: relative;
@@ -344,18 +422,86 @@ body {
 }
 
 /* --- 프로필 --- */
-.resume {
+.resume-section {
+  font-size: 0.8em;
+  padding-top: 3em;
+  padding-left: 8vh;
+  padding-right: 8vh;
+  padding-bottom: 3em;
   height: 100vh;
-  font-size: 1.2vh;
+  background-color: #111;
+  align-content: center;
+}
+.resume {
+  display: flex;
+  justify-content: center;
+  max-height: 500px;
 }
 .resume-title {
-  display: inline-block;       
-  background-color: #ffffff;    
-  color: #2b2a2a;                
-  padding: 8px 16px;         
-  border-radius: 2vh;      
-  font-weight: bold;          
-  letter-spacing: 0.2vh;       
+  text-align: center;
+  font-size: 3vh;           
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+  padding-bottom: 3em;
+}
+.info-box {
+  display: flex; 
+  justify-content: space-between; 
+  flex-direction: column;
+  height: 70vh;
+  max-height: 450px;
+}
+.info {
+  width: 60vh;
+  max-width: 370px;
+}
+.info-title {
+  font-size: 2vh;
+  font-weight: 700;
+  padding-bottom: 1em;
+}
+.info-contents {
+  display: flex;
+  justify-content: space-between;
+}
+.info-content1 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-end;
+  color: #c1c1c1;
+  text-align: right;
+  font-weight: 300;
+}
+.info-content1 ul li {
+  padding-bottom: 0.2em;
+}
+.info-content2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+}
+.info-content2 ul li {
+  padding-bottom: 0.2em;
+}
+
+/* 스킬모음 */
+.skill {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 3em;
+}
+.skill-title {
+  position: absolute;
+  padding-bottom: 23em;
+  text-align: center;
+  font-size: 3vh;           
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  z-index: 1;
 }
 
 /* 빛나는 커서 */
