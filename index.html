@@ -2,130 +2,63 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>Nam So Hyun Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      color: white;
-    }
-
-    /* ====== 랜딩 영역 ====== */
-    .landing {
-      height: 100vh;
-      background-color: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .pulse-bg {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at center,
-                  rgba(121, 121, 121, 0.904) 0%,
-                  transparent 70%);
-      animation: pulse 4s infinite;
-      z-index: 0;
-    }
-    .landing h1 {
-      font-size: 4em;
-      font-weight: bold;
-      z-index: 1;
-    }
-
-    .landing .subtitle {
-      margin-top: 10px;
-      font-size: 1.2em;
-      color: #aaa;
-      z-index: 1;
-    }
-
-    .scroll-down {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.9em;
-      color: #aaa;
-      animation: bounce 1.5s infinite;
-      z-index: 1;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 0.3; }
-      50% { transform: scale(1.2); opacity: 0.1; }
-      100% { transform: scale(1); opacity: 0.3; }
-    }
-
-    .landing h1 {
-      font-size: 4em;
-      font-weight: bold;
-      z-index: 1;
-    }
-
-    .landing .subtitle {
-      margin-top: 10px;
-      font-size: 1.2em;
-      color: #aaa;
-      z-index: 1;
-    }
-
-    .scroll-down {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.9em;
-      color: #aaa;
-      animation: bounce 1.5s infinite;
-      z-index: 1;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-    }
-
-    /* ====== 자기소개 섹션 ====== */
-    .about {
-      height: 100vh;
-      background-color: #111;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-      padding: 40px;
-    }
-
-    .about h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: #00F5D4;
-    }
-
-    .about p {
-      max-width: 600px;
-      font-size: 1.1em;
-      line-height: 1.6;
-      color: #ddd;
-    }
-  </style>
+  <title>NAMSOHYUN Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <div class="logo-circle">●</div>
+      <div class="logo-name">NAM SO HYUN</div>
+    </div>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#strengths">Strengths</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- 랜딩 -->
   <section class="landing">
-    <div class="pulse-bg"></div>
-    <div>2025</div>
-    <h1>portfolio</h1>
-    <div class="subtitle" style="font-size: 13px; margin-top: -42px;">펄스에서 시작해 안전한 흐름을 만든다</div>
-    <div class="scroll-down">▼</div>
+    <div class="pulse-bg">
+      <div class="pulse-side left">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="pulse-side right">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- 타이틀 -->
+    <div class="subtitle">
+    </div>
+    <div class="maintitle">
+      <div class="title-year">2025</div>
+      <div class="title-portfolio">PORTFOLIO</div>
+    </div>
+    <div class="scroll-down">. . .</div>
+    <div class="title-info">
+      <div class="title-name">Name. nam so hyun </div> 
+      <div class="title-email">Email. namhun0102@naver.com</div>
+    </div>
   </section>
 
   <!-- 자기소개 -->
   <section class="about">
-    <h2>About Me</h2>
+    <div class="about-title">
+      <div class="title-circle">●</div>
+      INTRODUCTION
+    </div>
+    <img style="height: 20vh; padding-bottom: 2em;" src="sh.png">
     <p>
       저는 아키텍처 설계와 보안 모니터링, 해킹 실습, 취약점 분석 등 보안 실무를 직접 경험하며 시스템 전반을 이해했습니다. 
       또한 Docker 기반 클라우드 환경 구축과 AR 앱 개발을 통해 다양한 기술을 적용하며 역량을 넓혔습니다.
@@ -133,5 +66,85 @@
       앞으로도 새로운 기술을 익히고 도전을 이어가며 안전하고 신뢰할 수 있는 디지털 환경을 만들어가는 보안 전문가로 성장하겠습니다.
     </p>
   </section>
+
+  <section class="strengths">
+    <div class="strengths-title">
+      <div class="title-circle">●</div>
+      MY STRENGTHS
+    </div>
+    <div class="photo">
+      <img src="sh-why.png" alt="궁금" class="face curious">
+      <img src="sh-aha.png" alt="아하" class="face aha">
+
+      <!-- 강점들 -->
+      <div class="strength strength1">집요함</div>
+      <div class="strength strength2">문제 집착력</div>
+      <div class="strength strength3">꼼꼼함</div>
+    </div>
+  </section>
+
+  <section class="resume">
+    <div class="resume-title">
+      PORFLIE
+    </div>
+    <section class="info">
+      <div>INFORMATION</div>
+      <ul>
+        <li><strong>Name</strong> 남소현</li>
+        <li><strong>Birth</strong> 2001.01.02</li>
+        <li><strong>Location</strong> 경기도 수원시</li>
+        <li><strong>Phone</strong> 010-4941-1445</li>
+        <li><strong>Email</strong> namhun0102@hs.ac.kr</li>
+        <li><strong>Github</strong> github.com/NamSoHyun</li>
+        <li><strong>Blog</strong> sosohancodingating.tistory.com</li>
+      </ul>
+    </section>
+    <section class="education">
+      <div>EDUCATION</div>
+      <ul>
+        <li>2025.02 한신대학교 컴퓨터공학부 졸업</li>
+        <li>2023.02 서경대학교 컴퓨터소프트웨어학과 졸업</li>
+        <li>2020.02 성균고등학교 졸업</li>
+      </ul>
+    </section>
+    <section class="certificate">
+      <h2>CERTIFICATE</h2>
+      <ul>
+        <li>2025.08 정보보안기사 필기 합격</li>
+      </ul>
+    </section>
+
+    <section class="curriculum">
+      <h2>CURRICULUM</h2>
+      <ul>
+        <li>2025.03~2025.07 K-DIGITAL 인프라보안 부트캠프</li>
+        <li>2024.06 프로그래머스 PCCP</li>
+      </ul>
+    </section>
+
+    <section class="activities">
+      <h2>ACTIVITIES</h2>
+      <ul>
+        <li>2023.03~2024.12 인터넷보안 학회</li>
+        <li>2024.11 SW중심대학 우수작품 경진대회 참가</li>
+        <li>2024.02 사회문제 해결을 위한 해커톤 참가</li>
+      </ul>
+    </section>
+
+    <section class="awards">
+      <h2>AWARDS</h2>
+      <ul>
+        <li>2025.07 인프라보안 3기 파이널 프로젝트 대상</li>
+        <li>2024.11 캡스톤디자인 대상</li>
+        <li>2024.11 추계종합학술대회 은상</li>
+        <li>2023.10 커리어디자인 경진대회 최우수상</li>
+      </ul>
+    </section>
+  </section>
+
+  <!-- 커서 -->
+  <div class="cursor"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
