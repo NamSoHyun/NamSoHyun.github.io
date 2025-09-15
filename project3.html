@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <title>취약점 진단 보고서</title>
+  <style>
+    body {
+        background-color: #111;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 2em;
+    }
+
+    h2 {
+         margin-bottom: 1em;
+    }
+
+    .swiper-slide img {
+        display: block;
+        margin: 0 auto 2em;
+        max-width: 50%;
+        border: 1px solid #444;
+        border-radius: 8px;
+    }
+
+    .download-links a {
+        display: inline-block;
+        margin: 0.5em 1em;
+        padding: 0.7em 1.2em;
+        background-color: #111;
+        border: 1px solid #555;
+        border-radius: 8px;
+        color: #fff;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+
+    .download-links a:hover {
+          background-color: #333;
+    }
+
+    .back {
+        display: block;
+        margin-top: 3em;
+        color: #aaa;
+        text-decoration: none;
+    }
+    /* Swiper 기본 버튼 아이콘 제거 */
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+    content: '';   /* 기본 화살표 없애기 */
+    }
+
+    /* 오른쪽 버튼 (▶) */
+    .swiper-button-next {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #fff; /* 흰색 삼각형 */
+    filter: drop-shadow(0 0 2px rgb(255, 255, 255))
+          drop-shadow(0 0 5px rgba(255, 255, 255, 0.367))
+          drop-shadow(0 0 8px rgba(255, 255, 255, 0.201));
+    }
+
+    /* 왼쪽 버튼 (◀) */
+    .swiper-button-prev {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid #fff; /* 흰색 삼각형 */
+    filter: drop-shadow(0 0 2px rgb(255, 255, 255))
+          drop-shadow(0 0 5px rgba(255, 255, 255, 0.367))
+          drop-shadow(0 0 8px rgba(255, 255, 255, 0.201));
+    }
+
+    /* 페이지네이션 (동그라미) 색상 */
+    .swiper-pagination-bullet {
+    background: #fff !important; 
+    }
+
+    .swiper-pagination-bullet-active {
+    background: #ffffff !important; 
+    filter: drop-shadow(0 0 2px rgb(255, 255, 255))
+          drop-shadow(0 0 5px rgba(255, 255, 255, 0.367))
+          drop-shadow(0 0 8px rgba(255, 255, 255, 0.201));
+    }
+  </style>
+</head>
+<body>
+  <section class="report-view">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-01.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-02.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-03.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-04.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-05.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-06.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-07.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-08.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-09.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-10.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-11.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-12.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-13.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-14.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-15.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-16.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-17.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-18.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-19.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-20.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-21.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-22.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-23.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-24.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-25.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-26.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-27.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-28.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-29.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-30.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-31.png"></div>
+        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-32.png"></div>
+        </div>
+        <!-- 네비게이션 버튼 -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- 페이지 표시 -->
+        <div class="swiper-pagination"></div>
+    </div>
+    </section>
+
+    <a href="index.html#project" class="back">포트폴리오로 돌아가기</a>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+        keyboard: true,   // 키보드 화살표로 넘기기 가능
+    });
+    </script>
+</body>
+</html>
