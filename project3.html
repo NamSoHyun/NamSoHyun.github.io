@@ -1,58 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <title>취약점 진단 보고서</title>
-  <style>
-    body {
-        background-color: #111;
-        color: #fff;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding: 2em;
-    }
-
-    h2 {
-         margin-bottom: 1em;
-    }
-
-    .swiper-slide img {
-        display: block;
-        margin: 0 auto 2em;
-        max-width: 50%;
-        border: 1px solid #444;
-        border-radius: 8px;
-    }
-
-    .download-links a {
-        display: inline-block;
-        margin: 0.5em 1em;
-        padding: 0.7em 1.2em;
-        background-color: #111;
-        border: 1px solid #555;
-        border-radius: 8px;
-        color: #fff;
-        text-decoration: none;
-        transition: background 0.3s;
-    }
-
-    .download-links a:hover {
-          background-color: #333;
-    }
-
-    .back {
-        display: block;
-        margin-top: 3em;
-        color: #aaa;
-        text-decoration: none;
-    }
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="project3style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>취약점 진단 보고서</title>
+</head>
+<style>
     /* Swiper 기본 버튼 아이콘 제거 */
     .swiper-button-next::after,
     .swiper-button-prev::after {
-    content: '';   /* 기본 화살표 없애기 */
+    content: ''; 
     }
-
     /* 오른쪽 버튼 (▶) */
     .swiper-button-next {
     width: 0;
@@ -64,92 +23,172 @@
           drop-shadow(0 0 5px rgba(255, 255, 255, 0.367))
           drop-shadow(0 0 8px rgba(255, 255, 255, 0.201));
     }
-
     /* 왼쪽 버튼 (◀) */
     .swiper-button-prev {
     width: 0;
     height: 0;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-right: 15px solid #fff; /* 흰색 삼각형 */
+    border-right: 15px solid #fff;
     filter: drop-shadow(0 0 2px rgb(255, 255, 255))
           drop-shadow(0 0 5px rgba(255, 255, 255, 0.367))
           drop-shadow(0 0 8px rgba(255, 255, 255, 0.201));
     }
-
-    /* 페이지네이션 (동그라미) 색상 */
     .swiper-pagination-bullet {
     background: #fff !important; 
     }
-
     .swiper-pagination-bullet-active {
     background: #ffffff !important; 
     filter: drop-shadow(0 0 2px rgb(255, 255, 255))
           drop-shadow(0 0 5px rgba(255, 255, 255, 0.367))
           drop-shadow(0 0 8px rgba(255, 255, 255, 0.201));
     }
-  </style>
-</head>
+</style>
 <body>
-  <section class="report-view">
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-01.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-02.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-03.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-04.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-05.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-06.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-07.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-08.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-09.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-10.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-11.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-12.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-13.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-14.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-15.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-16.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-17.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-18.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-19.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-20.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-21.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-22.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-23.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-24.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-25.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-26.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-27.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-28.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-29.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-30.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-31.png"></div>
-        <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-32.png"></div>
+    <div class="title-circle">●</div>
+    <h2>취약점 진단 프로젝트</h2>
+
+    <div class="project-container">
+        <!-- 왼쪽 정보 -->
+        <div class="info-box">
+        <h3>프로젝트 기여도</h3>
+        <p>100%</p>
+        <h3>작업기간</h3>
+        <p>2 WEEKS</p>
         </div>
-        <!-- 네비게이션 버튼 -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <!-- 페이지 표시 -->
-        <div class="swiper-pagination"></div>
+        
+        <!-- 오른쪽 설명 -->
+        <div>
+        <div class="overview">
+            <div class="overview-title">프로젝트 개요</div>
+            본 프로젝트는 소리곳간 웹 서비스의 인프라 전반에 대한 보안 취약점 진단을 수행하고 
+            개선 사항을 도출하기 위해 진행되었습니다. 진단 대상은 웹 서버, API 서버, NFS 파일 서버, 
+            데이터베이스, Windows 각 환경에서 발생 가능한 보안 위협 요소를 식별하고 사전 예방 및 대응 방안을 마련하는 것을 목표로 하였습니다.</div>
+
+        <!-- 태그 -->
+        <div class="tags">
+            <span class="tag">#Web Server</span>
+            <span class="tag">#DB Server</span>
+            <span class="tag">#API Server</span>
+            <span class="tag">#NFS Server</span>
+        </div>
+        </div>
     </div>
+
+    <section class="project-method">
+        <div class="project-method-title">진단 방법 및 기준</div>
+        <div class="project-method-content">
+            <p>
+                본 취약점 진단은 <strong>「주요정보통신기반시설 기술적 취약점 분석·평가 방법 상세 가이드」</strong>를 기준으로 수행되었습니다.
+            </p>
+            <p>
+                해당 가이드를 바탕으로 웹 서비스, 운영체제, 데이터베이스 등 주요 요소별 항목을 점검하였으며 
+                계정 관리, 인증 설정, 접근 통제, 로그 관리, 패치 관리 등 항목별로 구분하여 분석을 진행했습니다.
+            </p>
+            <p>
+                진단 결과는 <strong>‘양호’</strong>, <strong>‘취약’</strong>, <strong>‘예외’</strong>로 분류하여 
+                각 항목별 조치 권고사항을 도출했습니다.
+            </p>
+        </div>
+    </section>
+
+    <section class="project-summary">
+        <div class="summary-box">
+            <div style="display: flex; border: 1px solid #fff;">
+                <div class="summary-number-num1">1</div>
+                <div class="summary-number-title1">주요 역할</div>
+            </div>
+            <p>
+            보안 진단 계획 수립, 취약점 스캐닝 및 수동 분석 수행.  
+            SQL Injection, XSS, CSRF 등 주요 웹 취약점 진단 및 보고서 작성.  
+            개선 방안 제시 및 보안 가이드라인 작성.
+            </p>
+        </div>
+
+        <div class="summary-box">
+            <div style="display: flex; border: 1px solid #fff;">
+                <div class="summary-number-num1">2</div>
+                <div class="summary-number-title1">경험 및 배운 점</div>
+            </div>
+            <p>
+            OWASP Top 10 기반으로 보안 위협을 체계적으로 학습.  
+            자동화 도구와 수동 분석의 차이를 체감하고, 보완책을 직접 적용.  
+            보안 진단 과정을 문서화하며 보고서 작성 능력을 강화.
+            </p>
+        </div>
+
+        <div class="summary-box">
+            <div style="display: flex; border: 1px solid #fff;">
+                <div class="summary-number-num1">3</div>
+                <div class="summary-number-title1">문제점 및 해결 과정</div>
+            </div>
+            <p>
+            초기 진단 시 과도한 False Positive(오탐) 발생 문제.  
+            로그 분석 및 패킷 캡처를 통해 실제 취약점과 오탐을 구분.  
+            세션 관리·입력 검증 등을 직접 적용하여 개선 효과를 검증.
+            </p>
+        </div>
+    </section>
+
+    <section class="report-view">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-01.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-02.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-03.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-04.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-05.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-06.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-07.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-08.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-09.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-10.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-11.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-12.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-13.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-14.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-15.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-16.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-17.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-18.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-19.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-20.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-21.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-22.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-23.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-24.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-25.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-26.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-27.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-28.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-29.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-30.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-31.png"></div>
+            <div class="swiper-slide"><img src="files/report/취약점진단보고서_남소현_20250725-32.png"></div>
+            </div>
+            <!-- 네비게이션 버튼 -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- 페이지 표시 -->
+            <div class="swiper-pagination"></div>
+        </div>
     </section>
 
     <a href="index.html#project" class="back">포트폴리오로 돌아가기</a>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-    var swiper = new Swiper(".mySwiper", {
-        navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        },
-        keyboard: true,   // 키보드 화살표로 넘기기 가능
-    });
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            keyboard: true,   // 키보드 화살표로 넘기기 가능
+        });
     </script>
 </body>
 </html>
