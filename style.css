@@ -348,6 +348,31 @@ body {
                0 0 20px rgba(215, 215, 215, 0.253);
 }
 
+.title-line4 {
+  background-color: #111;
+  position: relative;
+  border-bottom: 1px solid #b1b1b1;  
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+}
+
+/* 흰 점 */
+.title-line4::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  transform: translateX(60vh);
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(215, 215, 215, 0.708),
+               0 0 10px rgba(215, 215, 215, 0.328),
+               0 0 20px rgba(215, 215, 215, 0.253);
+}
+
 /* --- 나의 강점 --- */
 .strengths {
   height: 90vh;
@@ -597,10 +622,10 @@ body {
 
 /* 프로젝트 모음 */
 .projects {
-  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-top: 5em;
 }
 .projec-title {
   text-align: center;
@@ -617,35 +642,114 @@ body {
   justify-content: center;
   gap: 3em;
   padding: 2vh;
-  margin-top: 3vh;
+  margin-top: 3em;
+  margin-bottom: 5em;
 }
 
-.project-circle {
+.project-card {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  align-items: stretch;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  transition: 0.3s;
+  width: 60vh;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+.project-text {
+  flex: 1;
+  padding: 1.5em;
+  color: #000000;
+}
+
+.project-img {
+  flex: 0.7;
+  min-width: 100px;
+  max-width: 300px;
+  min-height: 200px;
+  max-height: 200px;
+}
+
+.project-img img {
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+}
+
+.project-header {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: #383838;
+}
+
+.project-period {
+  font-size: 0.7em;
+  color: #aaa;
+  margin-bottom: 1em;
+}
+
+.project-card p {
+  font-size: 0.8em;
+  color: #000000;
+  margin-bottom: 1em;
+}
+
+.tech-stack {
+  font-size: 0.7em;
+  margin: 1em 0;
+  color: rgb(56, 56, 56);
+}
+
+.buttons {
+}
+
+.btn {
+  font-size: 12px;
+  display: inline-block;
+  padding: 0.4em 1em;
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  color: white;
-  transition: transform 0.3s;
+  background-color: #393838;
+  border-radius: 60px;
 }
 
-.project-circle img {
-  width: 26vh;
-  height: 26vh;
-  border-radius: 50%;    
-  object-fit: cover;     
-  box-shadow: 0 4px 12px rgba(226, 226, 226, 0.104);
-  transition: transform 0.3s, box-shadow 0.3s;
+.btn:hover {
+  background: rgb(137, 137, 137);
+  color: #ffffff;
 }
 
-.project-circle:hover img {
-  transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+.btn.video {
+  color: #ffffff;
 }
 
-.project-circle span {
-  margin-top: 0.8em;
-  font-size: 1em;
+.btn.video:hover {
+  background: rgb(137, 137, 137);
+  color: #ffffff;
+}
+
+.footer {
+  text-align: center;
+  padding: 2em 1em;
+  color: #aaa;
+  font-size: 0.9em;
+  margin-top: 3em;
+}
+
+.footer p {
+  margin: 0.3em 0;
+}
+
+.footer p:first-child {
+  color: #fff;
+  font-weight: bold;
 }
 
 /* 빛나는 커서 */
