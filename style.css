@@ -611,6 +611,43 @@ body {
   padding-bottom: 4vh;
 }
 
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3em;
+  padding: 2vh;
+  margin-top: 3vh;
+}
+
+.project-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.project-circle img {
+  width: 26vh;
+  height: 26vh;
+  border-radius: 50%;    
+  object-fit: cover;     
+  box-shadow: 0 4px 12px rgba(226, 226, 226, 0.104);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-circle:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}
+
+.project-circle span {
+  margin-top: 0.8em;
+  font-size: 1em;
+}
+
 /* 빛나는 커서 */
 .cursor {
   position: fixed;
