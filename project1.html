@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="project1style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>웹 해킹 실습 플랫폼</title>
+</head>
+<style>
+    /* Swiper 기본 버튼 아이콘 제거 */
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        content: ''; 
+    }
+    /* 오른쪽 버튼 (▶) */
+    .swiper-button-next {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 15px solid #fff; /* 흰색 삼각형 */
+        filter: drop-shadow(0 0 2px rgb(255, 255, 255))
+            drop-shadow(0 0 5px rgba(255, 255, 255, 0.367))
+            drop-shadow(0 0 8px rgba(255, 255, 255, 0.201));
+    }
+    /* 왼쪽 버튼 (◀) */
+    .swiper-button-prev {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 15px solid #fff;
+        filter: drop-shadow(0 0 2px rgb(255, 255, 255))
+            drop-shadow(0 0 5px rgba(255, 255, 255, 0.367))
+            drop-shadow(0 0 8px rgba(255, 255, 255, 0.201));
+    }
+    .swiper-pagination-bullet {
+        background: #fff !important; 
+    }
+    .swiper-pagination-bullet-active {
+        background: #ffffff !important; 
+        filter: drop-shadow(0 0 2px rgb(255, 255, 255))
+            drop-shadow(0 0 5px rgba(255, 255, 255, 0.367))
+            drop-shadow(0 0 8px rgba(255, 255, 255, 0.201));
+    }
+</style>
+<body>
+    <div class="title-circle">●</div>
+    <h2>웹 해킹 실습 플랫폼 프로젝트</h2>
+    <img src="img/logoCyber.png" style="max-width: 150px; margin: auto; margin-bottom: 2em;">
+  
+    <div class="project-container">
+        <!-- 왼쪽 정보 -->
+        <div class="info-box">
+        <h3>프로젝트 기여도</h3>
+        <p>50%</p>
+        <h3>작업인원</h3>
+        <p>2명</p>
+        <h3>작업기간</h3>
+        <p>3 WEEKS</p>
+        </div>
+        
+        <!-- 오른쪽 설명 -->
+        <div>
+        <div class="overview">
+            <div class="overview-title">프로젝트 개요</div>
+            이 프로젝트는 보안 교육용 웹 해킹 실습 플랫폼으로, SQL Injection, XSS, CSRF 등
+            대표적인 웹 취약점을 직접 실습할 수 있는 환경을 구축했습니다. 가상머신 기반의
+            격리된 환경에서 실습이 진행되며, 관리자 페이지·게시판·로그인 시스템 등 다양한 
+            모듈을 제작하여 학습자가 실제 공격과 방어 과정을 경험할 수 있도록 설계했습니다. 또한 취약점 분석 결과를 자동으로 기록하고 점수를 부여하는 기능을 추가하여 교육 효과를 강화했습니다.</div>
+        <!-- 태그 -->
+        <div class="tags">
+            <span class="tag">#Apache</span>
+            <span class="tag">#Docker</span>
+            <span class="tag">#Elasticsearch</span>
+            <span class="tag">#Filebeat</span>
+            <span class="tag">#Kali Linux</span>
+            <span class="tag">#Kibana</span>
+            <span class="tag">#Logstash</span>
+            <span class="tag">#MySQL</span>
+            <span class="tag">#PHP</span>
+            <span class="tag">#Ubuntu Linux</span>
+          </div>
+        </div>
+    </div>
+
+    <section class="project-summary">
+        <div class="summary-box">
+            <div style="display: flex; border: 1px solid #fff;">
+                <div class="summary-number-num1">1</div>
+                <div class="summary-number-title1">주요 역할</div>
+            </div>
+            <p>
+            웹 해킹 실습 플랫폼의 웹 개발, Docker 기반 실습 환경 컨테이너화, 
+            데이터 시퀀스 및 시스템 구성도 설계, 비즈니스 모델 설계 담당.
+            </p>
+        </div>
+
+        <div class="summary-box">
+            <div style="display: flex; border: 1px solid #fff;">
+                <div class="summary-number-num1">2</div>
+                <div class="summary-number-title1">경험 및 배운 점</div>
+            </div>
+            <p>
+            프로젝트의 핵심 설계 과정을 직접 수행하며 인프라 보안 아키텍처의 중요성을 
+            알게 되었고 컨테이너 기반 환경 격리와 자동화 배포의 필요성을 배움.
+            </p>
+        </div>
+
+        <div class="summary-box">
+            <div style="display: flex; border: 1px solid #fff;">
+                <div class="summary-number-num1">3</div>
+                <div class="summary-number-title1">문제점 및 해결 과정</div>
+            </div>
+            <p>
+            Docker 기반 자동화 인프라를 처음 맡아 어려움이 많았음.
+            환경 격리와 네트워크 설정에서 시행착오를 겪으며 점차 익숙해져 문제를 해결할 수 있었음.
+            </p>
+        </div>
+    </section>
+
+    <section class="project-result" style="margin-top: 5em;">
+        <div class="title-circle1">●</div>
+        <h3 class="result-title" style="margin-bottom: 2em;">프로젝트 결과물</h3>
+
+        <!-- 서비스 화면 스크린샷 -->
+        <div class="result-item">
+            <div class="result-desc">
+                <h4>
+                    <span class="circle"></span>
+                    웹 서비스 UI
+                </h4>
+                <p>
+                    공격 실습이 가능한 취약점이 존재하는 웹 제공
+                </p>    
+            </div>
+            <section class="report-view">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/webhackmain.png"></div>
+                        <div class="swiper-slide"><img src="img/스크린샷 2025-04-01 110456.png"></div>
+                        <div class="swiper-slide"><img src="img/스크린샷 2025-04-03 200755.png"></div>
+                        <div class="swiper-slide"><img src="img/스크린샷 2025-04-03 201108.png"></div>
+                        <div class="swiper-slide"><img src="img/스크린샷 2025-04-03 201032.png"></div>
+                        <div class="swiper-slide"><img src="img/와프 방화벽 로그 SIEM 서버 키바나 시각화.png"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- 페이지 표시 -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!-- 아키텍처 다이어그램 -->
+            <div class="result-item" style="margin-top: 10vh;">
+                <div class="result-desc">
+                    <h4>
+                        <span class="circle"></span>
+                        시스템 구성도
+                    </h4>
+                    <p>
+                    </p>
+                </div>
+                <div class="img-wrap">
+                    <img id="architecture-thumb" src="img/시스템구성도.png" alt="아키텍처 다이어그램" class="result-img" />
+                </div>
+            </div>
+            <div class="result-item" style="margin-top: 10vh;">
+                <div class="result-desc">
+                    <h4>
+                        <span class="circle"></span>
+                        Data Sequence
+                    </h4>
+                    <p>
+                    </p>
+                </div>
+                <div class="img-wrap">
+                    <img id="architecture-thumb" src="img/dataSequence.png" alt="아키텍처 다이어그램" class="result-img" />
+                </div>
+            </div>
+        </div>
+
+    <a href="index.html#project" class="back">포트폴리오로 돌아가기</a>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            keyboard: true, 
+        });
+    </script>
+</body>
+</html>

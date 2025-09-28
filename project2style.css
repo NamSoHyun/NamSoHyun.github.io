@@ -1,0 +1,371 @@
+@font-face {
+    font-family: 'PyeojinGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2504-1@1.0/PyeojinGothic-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PyeojinGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2504-1@1.0/PyeojinGothic-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PyeojinGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2504-1@1.0/PyeojinGothic-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: 'PyeojinGothic';
+    text-align: center;
+    padding: 7vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3em;
+    align-items: start;
+    max-width: 900px;
+    margin: auto;
+}
+
+.info-box {
+    text-align: center;
+    padding-left: 2px;
+}
+
+.info-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    color: #aaa;
+}
+
+.info-box p {
+    font-size: 1.8em;
+    margin-bottom: 2em;
+    font-weight: bold;
+}
+
+.overview-title {
+    padding-top: 18px;
+    padding-bottom: 7px;
+    font-weight: bold;
+    color: #b7b7b7;
+}
+.overview {
+    font-size: 0.9em;
+    line-height: 1.7em;
+    text-align: justify;
+    
+}
+
+.tags {
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    font-size: 0.9em;
+}
+
+.tag {
+    padding: 0.5em 1.2em;
+    border-radius: 30px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.tag:hover {
+    background: #ffffff;
+    color: #1e1e1e;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.9),
+                0 0 15px rgba(187, 187, 187, 0.7),
+                0 0 25px rgba(170, 170, 170, 0.5);
+}
+
+.swiper-slide img {
+    display: block;
+    margin: 0 auto 2em;
+    max-width: 70%;
+    border: 1px solid #444;
+    border-radius: 8px;
+}
+
+.download-links a {
+    display: inline-block;
+    margin: 0.5em 1em;
+    padding: 0.7em 1.2em;
+    background-color: #111;
+    border: 1px solid #555;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.download-links a:hover {
+    background-color: #333;
+}
+
+.back {
+    display: block;
+    margin-top: 3em;
+    color: #aaa;
+    text-decoration: none;
+}
+.title-circle {
+    font-size: 24px;
+    text-shadow: 0 0 5px rgba(215, 215, 215, 0.708),
+                0 0 10px rgba(215, 215, 215, 0.328),
+                0 0 20px rgba(215, 215, 215, 0.253);
+}
+
+.title-circle1 {
+    font-size: 15px;
+    text-shadow: 0 0 5px rgba(215, 215, 215, 0.708),
+                0 0 10px rgba(215, 215, 215, 0.328),
+                0 0 20px rgba(215, 215, 215, 0.253);
+}
+
+.project-method {
+    background: #111;
+    margin: 0 auto;
+    color: #ddd;
+    box-shadow: 0 0 15px rgba(255,255,255,0.05);
+    max-width: 1000px; 
+    border: 1px solid #fff;
+    text-align: left;
+    margin-top: 3em;
+}
+
+.project-method-title {
+    font-size: 1em;
+    font-weight: bold;
+    color: #cbcbcb; /* 네온톤 */
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.project-method-content p {
+    margin-bottom: 1em;
+    line-height: 1.6em;
+    font-size: 0.9em;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+    
+.project-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;              
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;       
+    margin-top: 4em;
+    margin-bottom: 5em;
+}
+.summary-box {
+    max-width: 325px;
+    background: #111;
+    color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+.summary-number-num1 {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.summary-number-title1 {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 15px;
+    border-left: 1px solid #fff;
+}
+.summary-box p {
+    font-size: 0.9em;
+    text-align: left;
+    line-height: 1.6em;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.report-view {
+    background-color: rgb(27, 27, 27);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* 아키텍쳐 */
+.img-wrap { 
+    display:inline-block; 
+    max-width: 1000px; 
+    cursor:zoom-in; 
+}
+
+#architecture-thumb {
+    border-radius: 10px;
+}
+
+.result-img { 
+    max-width:100%; 
+    height:auto; 
+    display:block; 
+}
+
+.img-viewer {
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: 1200;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* 배경 */
+.iv-backdrop {
+    position: absolute; inset:0;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(2px);
+    pointer-events: auto;
+}
+
+/* 툴바 */
+.iv-toolbar {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display:flex;
+    gap:8px;
+    z-index:1300;
+    pointer-events: auto;
+}
+.iv-toolbar button {
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 8px 10px;
+    border-radius:6px;
+    font-size:18px;
+    cursor:pointer;
+    backdrop-filter: blur(2px);
+}
+.iv-toolbar button:hover { 
+    background: rgba(255,255,255,0.12); 
+}
+
+/* 이미지 표시 영역 */
+.iv-stage {
+    position: relative;
+    max-width: 92vw;
+    max-height: 86vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index:1250;
+    pointer-events: auto;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.05));
+}
+
+/* 뷰어에 넣을 이미지 */
+.iv-stage img {
+    display:block;
+    max-width:none; /* 중요: 실제 크기와 transform으로 제어 */
+    max-height:none;
+    will-change: transform;
+    user-select: none;
+    -webkit-user-drag: none;
+    touch-action: none; /* 터치 이벤트 직접 처리 */
+    cursor: grab;
+}
+
+/* 드래그 중 */
+.iv-stage img.dragging { 
+    cursor: grabbing; 
+}
+
+/* 힌트 */
+.iv-hint {
+    font-family: 'PyeojinGothic';
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1300;
+    color: rgba(255,255,255,0.85);
+    font-size: 13px;
+    background: rgba(0,0,0,0.35);
+    padding: 6px 10px;
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+/* 보여줄 때 */
+.img-viewer.open { 
+    display:flex; 
+    pointer-events: auto; 
+}
+
+/* 반응형: 작은 화면에서 툴바 조정 */
+@media (max-width:480px) {
+    .iv-toolbar { top: 8px; right: 8px; gap:6px; }
+    .iv-toolbar button { padding:6px 8px; font-size:16px; }
+    .iv-hint { font-size:12px; bottom:8px; }
+}
+
+.result-desc {
+    max-width: 1000px; 
+    margin: auto;
+}
+.result-desc h4 {
+    display: flex;         /* 플렉스박스로 */
+    align-items: center;   /* 세로 가운데 맞춤 */
+    gap: 20px;             /* 원과 글자 사이 간격 */
+    font-size: 1.2em;
+    margin: 0;
+}
+.result-desc h4 .circle {
+    position: static;      /* absolute 없애기 */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(215, 215, 215, 0.7),
+                0 0 10px rgba(215, 215, 215, 0.4),
+                0 0 20px rgba(215, 215, 215, 0.25);
+}
+.result-desc p {
+  text-align: left;       /* 내용 왼쪽 정렬 */
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}

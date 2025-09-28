@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="project4style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>Beacon과 AR을 활용한 역사 내 네비게이션 앱</title>
+</head>
+<style>
+    /* Swiper 기본 버튼 아이콘 제거 */
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+    content: ''; 
+    }
+    /* 오른쪽 버튼 (▶) */
+    .swiper-button-next {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #fff; /* 흰색 삼각형 */
+    filter: drop-shadow(0 0 2px rgb(255, 255, 255))
+          drop-shadow(0 0 5px rgba(255, 255, 255, 0.367))
+          drop-shadow(0 0 8px rgba(255, 255, 255, 0.201));
+    }
+    /* 왼쪽 버튼 (◀) */
+    .swiper-button-prev {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid #fff;
+    filter: drop-shadow(0 0 2px rgb(255, 255, 255))
+          drop-shadow(0 0 5px rgba(255, 255, 255, 0.367))
+          drop-shadow(0 0 8px rgba(255, 255, 255, 0.201));
+    }
+    .swiper-pagination-bullet {
+    background: #fff !important; 
+    }
+    .swiper-pagination-bullet-active {
+    background: #ffffff !important; 
+    filter: drop-shadow(0 0 2px rgb(255, 255, 255))
+          drop-shadow(0 0 5px rgba(255, 255, 255, 0.367))
+          drop-shadow(0 0 8px rgba(255, 255, 255, 0.201));
+    }
+</style>
+<body>
+    <div class="title-circle">●</div>
+    <h2>Beacon과 AR을 활용한 역사 내 네비게이션 앱</h2>
+    <img src="img/0. 앱아이콘.png" style="max-width: 90px; margin: auto; margin-bottom: 2em;">
+
+    <div class="project-container">
+        <!-- 왼쪽 정보 -->
+        <div class="info-box">
+        <h3>프로젝트 기여도</h3>
+        <p>25%</p>
+        <h3>작업인원</h3>
+        <p>4명</p>
+        <h3>작업기간</h3>
+        <p>6 months</p>
+        </div>
+        
+        <!-- 오른쪽 설명 -->
+        <div>
+        <div class="overview">
+            <div class="overview-title">프로젝트 개요</div>
+            현대 지하철역의 복잡성으로 인해 GPS 기반 내비게이션이 비효율적인 문제를 
+            확인하였습니다. 이를 해결하기 위해 BLE 비콘과 증강현실(AR)을 활용한 
+            지하철 내비게이션 앱을 개발하였습니다. 본 시스템은 실시간 위치 추적과 
+            직관적인 AR 길 안내를 제공하였으며, 기존 앱의 시간표·역정보 기능과 통합하여 
+            사용자 경험과 접근성을 향상시켰습니다.</div>
+        <!-- 태그 -->
+        <div class="tags">
+            <span class="tag">#AndroidStudio</span>
+            <span class="tag">#AR Foundation</span>
+            <span class="tag">#Beacon</span>
+            <span class="tag">#C#</span>
+            <span class="tag">#Unity</span>
+            <span class="tag">#MySQL</span>
+            <span class="tag">#Restful API</span>
+            <span class="tag">#RoomDB</span>
+            <span class="tag">#JAVA</span>
+            <span class="tag">#삼각측량법</span>
+            <span class="tag">#삼변측량법</span>
+        </div>
+        </div>
+    </div>
+
+    <section class="project-summary">
+        <div class="summary-box">
+            <div style="display: flex; border: 1px solid #fff;">
+                <div class="summary-number-num1">1</div>
+                <div class="summary-number-title1">주요 역할</div>
+            </div>
+            <p>
+            앱의 로고와 UI 디자인을 직접 제작하고 
+            교내 테스트 환경을 기반으로 가상 맵을 구축하였으며, 
+            AR 모드에서의 편의 기능을 구현.
+            2D→3D 전환과 화살표 렌더링을 통한 길 안내와 주변 시설의 실시간 정보 제공 기능을 담당.
+            </p>
+        </div>
+
+        <div class="summary-box">
+            <div style="display: flex; border: 1px solid #fff;">
+                <div class="summary-number-num1">2</div>
+                <div class="summary-number-title1">경험 및 배운 점</div>
+            </div>
+            <p>
+            AR 기술의 원리와 적용 가능성에 대해 깊이 이해하게 되었으며, 
+            실제 구현 과정에서 발생하는 문제를 직접 해결하면서 
+            기술적 자신감과 문제 해결 능력 키웠음. 
+            또한 스스로 학습하고 보완하는 과정을 통해 
+            주도적으로 프로젝트를 완성하는 경험을 쌓았음.
+            </p>
+        </div>
+
+        <div class="summary-box">
+            <div style="display: flex; border: 1px solid #fff;">
+                <div class="summary-number-num1">3</div>
+                <div class="summary-number-title1">문제점 및 해결 과정</div>
+            </div>
+            <p>
+            AR 기능 구현 시 경험 부족과 자료의 한계로 초기에는 많은 어려움이 있었으며, 
+            관련 기술에 익숙하지 않아 시행착오를 겪었으나 
+            다양한 논문과 기존 앱 사례를 참고하고 
+            실제 교내 환경을 스캔하여 맵핑한 뒤 반복적인 테스트를 진행함으로써
+            구현상의 문제를 보완할 수 있었음.
+            </p>
+        </div>
+    </section>
+
+    <section class="project-result" style="margin-top: 5em;">
+        <div class="title-circle1">●</div>
+        <h3 class="result-title" style="margin-bottom: 2em;">프로젝트 결과물</h3>
+
+        <!-- 서비스 화면 스크린샷 -->
+        <div class="result-item">
+            <div class="result-desc">
+                <h4>
+                    <span class="circle"></span>
+                    앱 서비스 UI
+                </h4>
+                <p>
+                    시간표·역정보 등 기본 기능과 AR 기반 실내 네비게이션을 결합
+                </p>
+            </div>
+            <section class="report-view">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/appsplq.jpg"></div>
+                    <div class="swiper-slide"><img src="img/appmain.jpg"></div>
+                    <div class="swiper-slide"><img src="img/app1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/app2.jpg"></div>
+                    <div class="swiper-slide"><img src="img/app3.jpg"></div>
+                    <div class="swiper-slide"><img src="img/app4.jpg"></div>
+                    <div class="swiper-slide"><img src="img/app5.jpg"></div>
+                    <div class="swiper-slide"><img src="img/app6.jpg"></div>
+                    <div class="swiper-slide"><img src="img/app7.jpg"></div>
+                    <div class="swiper-slide"><img src="img/app8.jpg"></div>
+                    <div class="swiper-slide"><img src="img/app9.jpg"></div>
+                    <div class="swiper-slide"><img src="img/app10.jpg"></div>
+                    <div class="swiper-slide"><img src="img/appnavi.png"></div>
+                    </div>
+                    <!-- 네비게이션 버튼 -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- 페이지 표시 -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+        </div>
+
+    <a href="index.html#project" class="back">포트폴리오로 돌아가기</a>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            keyboard: true,   // 키보드 화살표로 넘기기 가능
+        });
+    </script>
+    <script>
+        (function(){
+        const thumb = document.getElementById('architecture-thumb');
+        const viewer = document.getElementById('imgViewer');
+        const stage = document.getElementById('ivStage');
+        const backdrop = document.getElementById('ivBackdrop');
+        const btnZoomIn = document.getElementById('ivZoomIn');
+        const btnZoomOut = document.getElementById('ivZoomOut');
+        const btnReset = document.getElementById('ivReset');
+        const btnClose = document.getElementById('ivClose');
+
+        if(!thumb || !viewer) return;
+
+        // 복제할 이미지 (원본의 src/alt 사용)
+        const img = new Image();
+        img.src = thumb.src;
+        img.alt = thumb.alt || '';
+        img.draggable = false;
+        img.style.transformOrigin = 'center center';
+        stage.appendChild(img);
+
+        // 상태 변수
+        let scale = 1;
+        let minScale = 0.5;
+        let maxScale = 6;
+        let translate = {x:0, y:0};
+        let isDragging = false;
+        let dragStart = {x:0, y:0};
+        let lastTouchDist = null;
+        let lastTouchMid = null;
+
+        // 초기화
+        function resetTransform() {
+            scale = 1;
+            translate = {x:0, y:0};
+            updateTransform();
+        }
+
+        function updateTransform() {
+            img.style.transform = `translate(${translate.x}px, ${translate.y}px) scale(${scale})`;
+        }
+
+        // 열기
+        function openViewer() {
+            viewer.classList.add('open');
+            viewer.setAttribute('aria-hidden','false');
+            // 초기화 뷰 맞춤: 이미지가 큰 경우 보이도록 조정
+            resetTransform();
+            // 포커스 접근성
+            btnClose.focus();
+        }
+
+        // 닫기
+        function closeViewer() {
+            viewer.classList.remove('open');
+            viewer.setAttribute('aria-hidden','true');
+        }
+
+        // 휠 줌 (데스크탑)
+        function onWheel(e) {
+            e.preventDefault();
+            // 휠 > 확대/축소 (빠르기 조절)
+            const delta = - e.deltaY * 0.0015;
+            zoomAt(e.clientX, e.clientY, delta);
+        }
+
+        // 윈도우 좌표 -> 이미지 내부 좌표 변환 (모달 중심 기준)
+        function getStageRect() { return stage.getBoundingClientRect(); }
+
+        function zoomAt(clientX, clientY, deltaScale) {
+            const prevScale = scale;
+            let next = scale * (1 + deltaScale);
+            next = Math.min(Math.max(next, minScale), maxScale);
+            const rect = getStageRect();
+            // 이미지 좌표 기준으로 확대 중심점 조정 (팬 보정)
+            const cx = clientX - rect.left - rect.width/2 - translate.x;
+            const cy = clientY - rect.top - rect.height/2 - translate.y;
+            // 변경된 translate: 새로운 스케일에서 동일한 화면 좌표를 유지
+            translate.x -= (next/prevScale - 1) * cx;
+            translate.y -= (next/prevScale - 1) * cy;
+            scale = next;
+            updateTransform();
+        }
+
+        // 버튼으로 확대/축소
+        btnZoomIn.addEventListener('click', ()=> { zoomAt(window.innerWidth/2, window.innerHeight/2, 0.25); });
+        btnZoomOut.addEventListener('click', ()=> { zoomAt(window.innerWidth/2, window.innerHeight/2, -0.2); });
+        btnReset.addEventListener('click', resetTransform);
+        btnClose.addEventListener('click', closeViewer);
+        backdrop.addEventListener('click', closeViewer);
+
+        // 이미지 클릭 -> 열기
+        thumb.addEventListener('click', openViewer);
+
+        // 드래그 시작
+        img.addEventListener('mousedown', (e)=>{
+            isDragging = true;
+            img.classList.add('dragging');
+            dragStart = { x: e.clientX, y: e.clientY };
+        });
+        window.addEventListener('mousemove', (e)=>{
+            if(!isDragging) return;
+            const dx = e.clientX - dragStart.x;
+            const dy = e.clientY - dragStart.y;
+            dragStart = { x: e.clientX, y: e.clientY };
+            translate.x += dx;
+            translate.y += dy;
+            updateTransform();
+        });
+        window.addEventListener('mouseup', ()=>{
+            if(isDragging) {
+            isDragging = false;
+            img.classList.remove('dragging');
+            }
+        });
+
+        // 터치: 드래그(1finger) & 핀치(2finger)
+        img.addEventListener('touchstart', (e)=>{
+            if(e.touches.length === 1) {
+            isDragging = true;
+            dragStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+            } else if(e.touches.length === 2) {
+            isDragging = false;
+            lastTouchDist = getDistance(e.touches[0], e.touches[1]);
+            lastTouchMid = getMidpoint(e.touches[0], e.touches[1]);
+            }
+        }, {passive:false});
+
+        img.addEventListener('touchmove', (e)=>{
+            e.preventDefault();
+            if(e.touches.length === 1 && isDragging) {
+            const dx = e.touches[0].clientX - dragStart.x;
+            const dy = e.touches[0].clientY - dragStart.y;
+            dragStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+            translate.x += dx;
+            translate.y += dy;
+            updateTransform();
+            } else if(e.touches.length === 2) {
+            const dist = getDistance(e.touches[0], e.touches[1]);
+            const mid = getMidpoint(e.touches[0], e.touches[1]);
+            if(lastTouchDist) {
+                const ratio = dist / lastTouchDist;
+                const deltaScale = ratio - 1;
+                zoomAt(mid.x, mid.y, deltaScale); // 중심으로 확대
+            }
+            lastTouchDist = dist;
+            lastTouchMid = mid;
+            }
+        }, {passive:false});
+
+        img.addEventListener('touchend', (e)=>{
+            if(e.touches.length < 2) lastTouchDist = null;
+            if(e.touches.length === 0) isDragging = false;
+        });
+
+        function getDistance(p1, p2) {
+            const dx = p1.clientX - p2.clientX;
+            const dy = p1.clientY - p2.clientY;
+            return Math.hypot(dx, dy);
+        }
+        function getMidpoint(p1, p2) {
+            return { x: (p1.clientX + p2.clientX)/2, y: (p1.clientY + p2.clientY)/2 };
+        }
+
+        // 휠 이벤트 (이미지 위 또는 스테이지)
+        stage.addEventListener('wheel', onWheel, {passive:false});
+
+        // 키보드: ESC 닫기, +/- 확대축소
+        window.addEventListener('keydown', (e)=>{
+            if(!viewer.classList.contains('open')) return;
+            if(e.key === 'Escape') closeViewer();
+            if(e.key === '+' || e.key === '=') zoomAt(window.innerWidth/2, window.innerHeight/2, 0.15);
+            if(e.key === '-') zoomAt(window.innerWidth/2, window.innerHeight/2, -0.15);
+        });
+
+        // 이미지 로드 후 초기화 (이미지가 크면 중심 정렬을 위해)
+        img.addEventListener('load', ()=> {
+            resetTransform();
+        });
+
+        // 화면 리사이즈 시 (이미지 보정)
+        window.addEventListener('resize', ()=> {
+            // 뷰포트 바뀌면 이동이 지나치게 되면 보정 필요 시 추가 구현 가능
+        });
+
+        })();
+    </script>
+</body>
+</html>

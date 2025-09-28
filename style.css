@@ -204,7 +204,7 @@ body {
   50%      { transform: translateY(8px); }
 }
 
-/* --- 메인화면 개인정보 --- */
+/* 메인화면 개인정보 */
 .title-info {
   position: absolute;
   font-family: 'ChosunIlboMyungjo';
